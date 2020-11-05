@@ -25,6 +25,7 @@ const mapOptions = {
   mapTypeControl: false,
   fullscreenControl: false,
   gestureHandling: 'greedy',
+  zoomControl: false,
 };
 
 function Map() {
