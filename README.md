@@ -12,7 +12,7 @@ Visit https://stpaul-skyway.netlify.app/
 2. Clone into folder of your choice
 3. To access cloned repository type `cd stpaul-skyway-app` in command line
 4. Type `yarn install` in command line to install necessary packages
-5. The Google Maps API requires a key which you can obtain from [here](https://developers.google.com/maps/documentation/javascript/overview)
+5. The Google Maps API and Google Sheets API each requires a key which you can obtain from here [Google Maps](https://developers.google.com/maps/documentation/javascript/overview) [Google Sheets](https://developers.google.com/sheets/api)
 6. Create a file called ".env" outside of src folder.
 7. Add Google Maps API key as variable to the .env file as such REACT_APP_GOOGLE_API_KEY="<yourKey>".
 8. Type `yarn start` to run the application

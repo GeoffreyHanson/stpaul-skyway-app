@@ -11,6 +11,7 @@ import {
 import UserLocationMarker from '../UserLocationMarker';
 import Filter from '../Filter';
 import getSheetData from '../../utils/getSheetData';
+import MainDrawer from '../Drawer/MainDrawer';
 
 const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
@@ -39,6 +40,7 @@ function Map() {
 
   return (
     <LoadScript googleMapsApiKey={GOOGLE_KEY}>
+      <MainDrawer />
       <Filter category={category} setCategory={setCategory} />
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
