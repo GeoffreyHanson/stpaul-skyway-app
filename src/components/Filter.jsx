@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     zIndex: 100,
     backgroundColor: 'white',
+    marginTop: theme.spacing(10),
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
