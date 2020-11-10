@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Marker, InfoWindow } from '@react-google-maps/api';
-import getSheetData from '../utils/getSheetData';
+// import FastfoodIcon from '@material-ui/icons/Fastfood';
+// import storeIcon from './icons/store-alt-solid.svg';
+import getSheetData from '../../utils/getSheetData';
 
 const BusinessMarkers = ({ category }) => {
   const [markerData, setMarkerData] = useState([]);
@@ -11,6 +13,10 @@ const BusinessMarkers = ({ category }) => {
       textAlign: 'center',
     },
   };
+
+  // const icons = {
+  //   food:
+  // };
 
   // Grabbing data from Google Sheets
   useEffect(() => {
@@ -43,6 +49,8 @@ const BusinessMarkers = ({ category }) => {
         return (
           marker[1] === category && (
             <Marker
+              // TODO: use SVG
+              // icon={storeIcon}
               key={businessName}
               position={position}
               title={businessName}
@@ -59,7 +67,13 @@ const BusinessMarkers = ({ category }) => {
           <div style={styles.center}>
             <b>{activeMarker.businessName}</b>
             <hr />
-            <a href={activeMarker.googleLink}>View in Google Maps</a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={activeMarker.googleLink}
+            >
+              View in Google Maps
+            </a>
           </div>
         </InfoWindow>
       )}

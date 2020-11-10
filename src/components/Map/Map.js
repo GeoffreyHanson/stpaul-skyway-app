@@ -7,7 +7,7 @@ import {
   // useLoadScript,
 } from '@react-google-maps/api';
 import UserLocationMarker from '../UserLocationMarker';
-import BusinessMarkers from '../BusinessMarkers';
+import BusinessMarkers from '../BusinessMarkers/BusinessMarkers';
 import Filter from '../Filter';
 import MainDrawer from '../Drawer/MainDrawer';
 
