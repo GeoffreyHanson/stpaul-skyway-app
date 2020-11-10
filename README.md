@@ -46,7 +46,7 @@ Future Implementations
 - Matthew Sedlacek - [GitHub](https://github.com/matthewsedlacek)
 - Gus Murphy - [GitHub](https://github.com/gusbmurphy)
 
-#### UX/UI Desginers
+#### UX/UI Designers
 
 - Joey Pearlman - [LinkedIn](https://www.linkedin.com/in/joeypearlman/)
 
