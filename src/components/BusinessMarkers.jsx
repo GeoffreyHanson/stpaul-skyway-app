@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Marker, InfoWindow } from '@react-google-maps/api';
 import getSheetData from '../utils/getSheetData';
 
-const BusinessMarkers = ({ category }) => {
+const BusinessMarkers = ({ category, activeMarker, setActiveMarker }) => {
   const [markerData, setMarkerData] = useState([]);
-  const [activeMarker, setActiveMarker] = useState({});
 
   const styles = {
     center: {
