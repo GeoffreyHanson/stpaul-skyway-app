@@ -45,7 +45,10 @@ function Map() {
             'https://www.google.com/maps/d/kml?mid=1lHXdmJbygBq3sfnb6DBxjNU_HVcD_fdr' +
             '&ver='
           }${generateRandom()}`}
-          options={{ preserveViewport: true }}
+          options={{
+            preserveViewport: true,
+            suppressInfoWindows: true,
+          }}
         />
         <UserLocationMarker />
         <BusinessMarkers category={category} />
