@@ -29,6 +29,12 @@ const mapOptions = {
 
 function Map() {
   const [category, setCategory] = useState('');
+  const [activeMarker, setActiveMarker] = useState({});
+
+  // Closes open info windows on map click
+  const handleClick = () => {
+    setActiveMarker({});
+  };
 
   return (
     <LoadScript googleMapsApiKey={GOOGLE_KEY}>
@@ -39,6 +45,7 @@ function Map() {
         center={mapCenter}
         zoom={16}
         options={mapOptions}
+        onClick={handleClick}
       >
         <KmlLayer
           url={`${
@@ -51,7 +58,11 @@ function Map() {
           }}
         />
         <UserLocationMarker />
-        <BusinessMarkers category={category} />
+        <BusinessMarkers
+          category={category}
+          activeMarker={activeMarker}
+          setActiveMarker={setActiveMarker}
+        />
       </GoogleMap>
     </LoadScript>
   );
