@@ -22,7 +22,6 @@ export default function UserLocationMarker() {
             lat: position.coords.latitude,
             lng: position.coords.longitude,
           });
-          return <Marker position={userPosition} />;
         },
         // This second callback will be called if there's an error
         () => {
