@@ -10,7 +10,7 @@ function HandleGeolocationDisabled() {
   console.log('Browser does not have geolocation enabled.');
 }
 
-const postiionUpdateInterval = 2000;
+const postitionUpdateInterval = 2000;
 
 export default function UserLocationMarker() {
   const [userPosition, setUserPosition] = useState();
@@ -31,7 +31,7 @@ export default function UserLocationMarker() {
             HandleGeolocationFailure();
           },
         );
-      }, postiionUpdateInterval);
+      }, postitionUpdateInterval);
       // Return a function to clear the timeout when the component is unmounted
       return () => clearTimeout(timer);
     }
