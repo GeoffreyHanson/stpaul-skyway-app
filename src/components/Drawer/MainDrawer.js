@@ -157,15 +157,13 @@ export default function MainDrawer() {
             </ListItemText>
             {/* <Link></Link> */}
           </ListItem>
-          {[
-            'Entrances',
-            'PDF Map',
-            'Information about Coronavirus (COVID-19)',
-          ].map((text) => (
-            <ListItem button key={text}>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          {['Entrances', 'Information about Coronavirus (COVID-19)'].map(
+            (text) => (
+              <ListItem button key={text}>
+                <ListItemText primary={text} />
+              </ListItem>
+            ),
+          )}
         </List>
         <Divider />
         <br />
