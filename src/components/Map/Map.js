@@ -6,7 +6,7 @@ import {
   KmlLayer,
   // useLoadScript,
 } from '@react-google-maps/api';
-import UserLocationMarker from '../UserLocationMarker';
+import UserLocationMarker from '../UserLocationMarker/UserLocationMarker';
 import BusinessMarkers from '../BusinessMarkers';
 import Filter from '../Filter';
 import MainDrawer from '../Drawer/MainDrawer';
