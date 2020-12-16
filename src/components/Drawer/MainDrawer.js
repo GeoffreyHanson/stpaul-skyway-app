@@ -142,6 +142,21 @@ export default function MainDrawer() {
         </List>
         <Divider />
         <List>
+          <ListItem
+            button
+            href="https://www.stpaul.gov/sites/default/files/Media%20Root/Safety%20%26%20Inspections/DSI.Licensing.Skyway_Map_2018.pdf"
+          >
+            <ListItemText>
+              <a
+                target="_blank"
+                rel="noreferrer noreferrer"
+                href="https://www.stpaul.gov/sites/default/files/Media%20Root/Safety%20%26%20Inspections/DSI.Licensing.Skyway_Map_2018.pdf"
+              >
+                PDF Map
+              </a>
+            </ListItemText>
+            {/* <Link></Link> */}
+          </ListItem>
           {[
             'Entrances',
             'PDF Map',
@@ -153,8 +168,8 @@ export default function MainDrawer() {
           ))}
         </List>
         <Divider />
-        <br></br>
-        <br></br>
+        <br />
+        <br />
         <div>
           <List>
             <ReportBtn />
