@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Marker } from '@react-google-maps/api';
+import circle from './Icons/circle.svg';
 
 // These functions are place holders, and should display meaningful information for the user
 function HandleGeolocationFailure() {
@@ -40,6 +41,6 @@ export default function UserLocationMarker() {
     HandleGeolocationDisabled();
   });
 
-  if (userPosition) return <Marker position={userPosition} />;
+  if (userPosition) return <Marker icon={circle} position={userPosition} />;
   return null;
 }
