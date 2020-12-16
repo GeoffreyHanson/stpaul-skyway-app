@@ -149,7 +149,7 @@ export default function MainDrawer() {
             <ListItemText>
               <a
                 target="_blank"
-                rel="noreferrer noreferrer"
+                rel="noopener noreferrer"
                 href="https://www.stpaul.gov/sites/default/files/Media%20Root/Safety%20%26%20Inspections/DSI.Licensing.Skyway_Map_2018.pdf"
               >
                 PDF Map
