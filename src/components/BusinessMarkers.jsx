@@ -17,11 +17,9 @@ const BusinessMarkers = ({ category, activeMarker, setActiveMarker }) => {
   }, []);
 
   // Setting active marker for the InfoWindow
-  const onMarkerClick = (businessName, googleLink, position) => {
+  const onMarkerClick = (businessName) => {
     setActiveMarker({
       businessName,
-      googleLink,
-      position,
     });
   };
 
@@ -45,24 +43,22 @@ const BusinessMarkers = ({ category, activeMarker, setActiveMarker }) => {
               key={businessName}
               position={position}
               title={businessName}
-              onClick={() => onMarkerClick(businessName, googleLink, position)}
-            />
+              onClick={() => onMarkerClick(businessName)}
+            >
+              {/* Conditionally rendering a single info window based on the marker clicked */}
+              {activeMarker.businessName === businessName && (
+                <InfoWindow>
+                  <div style={styles.center}>
+                    <b>{businessName}</b>
+                    <br />
+                    <a href={googleLink}>View in Google Maps</a>
+                  </div>
+                </InfoWindow>
+              )}
+            </Marker>
           )
         );
       })}
-      {activeMarker.businessName && (
-        <InfoWindow
-          position={activeMarker.position}
-          onCloseClick={() => setActiveMarker({})}
-        >
-          <div style={styles.center}>
-            <b>{activeMarker.businessName}</b>
-            <hr />
-            <a href={activeMarker.googleLink}>View in Google Maps</a>
-          </div>
-        </InfoWindow>
-      )}
-      ;
     </>
   );
 };
