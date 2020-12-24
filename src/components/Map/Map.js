@@ -13,7 +13,7 @@ import MainDrawer from '../Drawer/MainDrawer';
 
 const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
-// Workaround for caching KML layer
+// Preventing caching of KML layer
 function generateRandom() {
   return Math.random() * 10000000000000000;
 }
