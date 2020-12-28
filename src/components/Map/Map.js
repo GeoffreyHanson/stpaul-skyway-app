@@ -10,6 +10,7 @@ import UserLocationMarker from '../UserLocationMarker';
 import BusinessMarkers from '../BusinessMarkers';
 import Filter from '../Filter';
 import MainDrawer from '../Drawer/MainDrawer';
+import Legend from '../Legend';
 
 const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
@@ -38,6 +39,14 @@ function Map() {
 
   return (
     <LoadScript googleMapsApiKey={GOOGLE_KEY}>
+      <Legend
+        keys={[
+          { title: 'Skyway Path', color: '#0e9d59' },
+          { title: 'Skyway Bridge', color: '#0189d2' },
+          { title: 'Reduced Hours Bridge/Path', color: '#e65100' },
+          { title: 'Tunnel', color: '#795548' },
+        ]}
+      />
       <MainDrawer />
       <Filter category={category} setCategory={setCategory} />
       <GoogleMap
