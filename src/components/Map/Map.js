@@ -31,6 +31,7 @@ const mapOptions = {
 function Map() {
   const [category, setCategory] = useState('');
   const [activeMarker, setActiveMarker] = useState({});
+  const [showLegend, setShowLegend] = useState(false);
 
   // Closes open info windows on map click
   const handleClick = () => {
@@ -40,6 +41,7 @@ function Map() {
   return (
     <LoadScript googleMapsApiKey={GOOGLE_KEY}>
       <Legend
+        show={showLegend}
         keys={[
           { title: 'Skyway Path', color: '#0e9d59' },
           { title: 'Skyway Bridge', color: '#0189d2' },

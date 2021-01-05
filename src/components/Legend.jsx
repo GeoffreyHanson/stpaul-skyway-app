@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Icon, Paper } from '@material-ui/core';
+import { Button, Icon, IconButton, Paper } from '@material-ui/core';
+import { CloseSharp, Lens } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   legend: {
@@ -24,14 +25,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Legend = ({ keys }) => {
+const Legend = ({ keys, show }) => {
   const classes = useStyles();
+  const [isShown, setIsShown] = useState(show);
 
   const Key = ({ title, color }) => {
     return (
       <div className={classes.key}>
         <Icon className={classes.icon} style={{ color }}>
-          lens
+          <Lens />
         </Icon>
         {title}
       </div>
@@ -42,11 +44,17 @@ const Legend = ({ keys }) => {
     return <Key title={title} color={color} key={`${title}${color}`} />;
   });
 
-  return (
-    <Paper elevation={3} className={classes.legend}>
-      {keyComponents}
-    </Paper>
-  );
+  if (isShown) {
+    return (
+      <Paper elevation={3} className={classes.legend}>
+        <IconButton size="small" onClick={() => setIsShown(false)}>
+          <CloseSharp />
+        </IconButton>
+        {keyComponents}
+      </Paper>
+    );
+  }
+  return null;
 };
 
 export default Legend;
