@@ -7,11 +7,11 @@ const useStyles = makeStyles((theme) => ({
   typography: {
     padding: theme.spacing(2),
   },
-  positioning: {
-    position: 'absolute',
-    bottom: 0,
-    margin: theme.spacing(1),
-  },
+  // positioning: {
+  //   position: 'absolute',
+  //   bottom: 0,
+  //   margin: theme.spacing(1),
+  // },
   color: {
     color: 'white',
     backgroundColor: 'red',
