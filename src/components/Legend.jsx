@@ -23,24 +23,11 @@ const useStyles = makeStyles((theme) => ({
   key: {
     fontSize: 16,
   },
-  showButtonContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    // minWidth: 120,
-    position: 'absolute',
-    zIndex: 100,
-    padding: theme.spacing(1),
-    bottom: theme.spacing(3),
-    right: theme.spacing(3),
-  },
-  showButton: {
-    fontSize: 12,
-  },
 }));
 
-const Legend = ({ keys }) => {
+const Legend = ({ keys, show }) => {
   const classes = useStyles();
-  const [isShown, setIsShown] = useState(true);
+  const [isShown, setIsShown] = useState(show);
 
   const Key = ({ title, color }) => {
     return (
@@ -67,14 +54,7 @@ const Legend = ({ keys }) => {
       </Paper>
     );
   }
-
-  return (
-    <Paper elevation={3} className={classes.showButtonContainer}>
-      <Button onClick={() => setIsShown(true)} className={classes.showButton}>
-        Legend
-      </Button>
-    </Paper>
-  );
+  return null;
 };
 
 export default Legend;
