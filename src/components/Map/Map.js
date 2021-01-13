@@ -14,10 +14,12 @@ import Legend from '../Legend';
 
 const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
+// Preventing caching of KML layer
 function generateRandom() {
   return Math.random() * 10000000000000000;
 }
 
+// Map & UI settings
 const mapContainerStyle = { height: `100vh` };
 const mapCenter = { lat: 44.947479, lng: -93.091638 };
 const mapOptions = {
