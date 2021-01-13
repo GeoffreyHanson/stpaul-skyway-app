@@ -17,13 +17,11 @@ const useStyles = makeStyles((theme) => ({
     right: theme.spacing(3),
   },
   icon: {
+    fontSize: 10,
     marginRight: theme.spacing(1),
-    // overflow: 'visible',
   },
   key: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
+    fontSize: 16,
   },
   showButtonContainer: {
     display: 'flex',
@@ -38,16 +36,11 @@ const useStyles = makeStyles((theme) => ({
   showButton: {
     fontSize: 12,
   },
-  closeButton: {
-    position: 'absolute',
-    top: theme.spacing(1),
-    right: theme.spacing(1),
-  },
 }));
 
 const Legend = ({ keys }) => {
   const classes = useStyles();
-  const [isShown, setIsShown] = useState(false);
+  const [isShown, setIsShown] = useState(true);
 
   const Key = ({ title, color }) => {
     return (
@@ -67,11 +60,7 @@ const Legend = ({ keys }) => {
   if (isShown) {
     return (
       <Paper elevation={3} className={classes.legend}>
-        <IconButton
-          size="small"
-          onClick={() => setIsShown(false)}
-          className={classes.closeButton}
-        >
+        <IconButton size="small" onClick={() => setIsShown(false)}>
           <CloseSharp />
         </IconButton>
         {keyComponents}
