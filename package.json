@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^7.1.2",
     "clsx": "^1.1.1",
     "leaflet": "^1.7.1",
+    "material-design-icons": "^3.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
     "react-div-100vh": "^0.5.6",
